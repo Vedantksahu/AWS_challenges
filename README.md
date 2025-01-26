@@ -1,5 +1,7 @@
 # AWS_challenges
 
+Day-1 
+
 Staring with the AWS respurces. 
 - What is EC2 Instance.
 - How can we created the EC2 instace/
