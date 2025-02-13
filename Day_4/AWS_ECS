@@ -1,0 +1,83 @@
+Creation OF ECS (Elastic Container service) :-
+
+What is ECS?
+-It is cloud based container manages service, that allows you to run the Docker contianer on a cluster of virtual server/
+
+Why ECS?
+- I handles server tasks :-
+  - Creation 
+  - Management
+  - Updating
+
+ECS Terms:-
+ - Cluster:- Group of service and task, Host all the infrastructure 
+ - Service:- Handles scalability and load balancing of the contianer.
+ - Task :- Reresents the running container.
+
+
+Steps to Create the ECS Cluster:-
+
+Step:1-
+
+Cluster Configuration :-
+
+ - Name 
+
+Infrastructure:- 
+
+ -AWS Fargate
+
+ Create 
+
+Step-2:
+
+Task Defiation :-
+
+1. Create new Task Defination:-
+
+ -Task Defination family
+ -Infrastrucure Requirenment Fargate 
+     - AWS Fargate
+
+
+2. Container 1:-
+
+ -Conatiner Details
+   - name - My Task
+   - image URL e.g.-  nginx:latest
+
+ - Port Maping
+ - Resource Utilization setting. 
+      -  Set the resource setting according to the Application image you want to run.
+ - Enable Log collection.
+
+ - Create.
+
+
+Step-3:-
+
+ Cluster:-
+   -Service
+
+      - Compute Option.
+          -Launch Type.
+
+         - Application Type Service.
+
+      - Family.
+          - Name of the Conatiner
+      - Service Type
+          -  Replica
+
+      - Desired Task-
+          - 2
+
+      - Add VPC
+
+   - Create
+
+The on the Cluster the Conainer will be up and running.
+
+-You can check by Public Ip of the farget, the Application will be up and running.
+
+- For any issue during creation, check the logs.
