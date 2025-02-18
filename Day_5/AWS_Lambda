@@ -1,0 +1,143 @@
+AWS Lambda: A Comprehensive Guide
+
+What is AWS Lambda?
+
+AWS Lambda is a serverless compute service that automatically runs code in response to events.
+It allows developers to execute code without managing servers, reducing operational overhead and improving scalability.
+----------------------------------------------------------------------------------------------------------------------------
+
+Key Features:-
+
+Event-driven execution – Runs in response to triggers (e.g., S3 events, API Gateway, CloudWatch, DynamoDB streams).
+
+Auto-scaling – Scales automatically based on demand.
+
+Supports multiple languages – Python, Node.js, Java, Go, Ruby, etc.
+
+Pay-per-use pricing – Charged based on execution time and memory consumption.
+
+Integration with AWS services – Works with S3, DynamoDB, API Gateway, Step Functions, and more.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+How is AWS Lambda Used?
+
+AWS Lambda is widely used in industry for various applications, such as:
+
+Serverless Web Applications – Handling backend logic via API Gateway.
+
+Data Processing – Triggered by S3, DynamoDB, or Kinesis streams for real-time data processing.
+
+Automated Infrastructure Management – Using CloudWatch to automate infrastructure tasks.
+
+Security Automation – Performing scheduled security checks and compliance reporting.
+
+AI & Machine Learning Workflows – Running ML models in response to data events.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Steps to Create an AWS Lambda Function (Python)
+
+1. Create an AWS Lambda Function
+
+Sign in to AWS Console and navigate to AWS Lambda.
+
+Click Create function.
+
+Choose Author from scratch.
+
+Enter a function name (e.g., MyLambdaFunction).
+
+Select Runtime as Python 3.x.
+
+Choose Execution Role (Create a new or existing IAM role with required permissions).
+
+Click Create function.
+
+2. Write Python Code
+
+Edit the function's code inline or upload a .zip file. Below is a basic Python example:
+
+import json
+
+def lambda_handler(event, context):
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from AWS Lambda!')
+    }
+
+3. Configure Triggers
+
+Add an API Gateway trigger for HTTP requests.
+
+Add an S3 Event trigger for file uploads.
+
+4. Deploy and Test
+
+Click Deploy.
+
+Use the Test tab to run the function with sample input.
+
+5. Monitor Execution
+
+Use Amazon CloudWatch Logs to track logs and debug issues.
+
+Check execution time and memory usage in AWS Lambda Monitoring.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Industry Use Cases
+
+Example 1: Automated Image Processing
+
+Trigger: S3 bucket uploads.
+
+Process: AWS Lambda resizes images using PIL (Python Imaging Library).
+
+Output: Stores resized images in another S3 bucket.
+
+Example 2: Real-time Log Processing
+
+Trigger: CloudWatch logs.
+
+Process: AWS Lambda filters and analyzes logs.
+
+Output: Sends alerts via SNS (Simple Notification Service).
+
+Example 3: API Backend for Web Applications
+
+Trigger: API Gateway.
+
+Process: AWS Lambda handles API requests.
+
+Output: Returns JSON responses to the frontend.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Limitations of AWS Lambda
+
+Execution Time Limit – Max 15 minutes per execution.
+
+Cold Start Delay – First-time invocation latency for infrequently used functions.
+
+Memory & Storage Limits – Max 10GB temporary storage, 10GB RAM.
+
+Package Size Restriction – Deployment package limited to 250MB including dependencies.
+
+No Persistent Connections – Does not maintain database connections like traditional servers.
+
+Timeout Constraints – Ideal for short-lived functions, not long-running processes.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Conclusion
+
+AWS Lambda is a powerful, scalable, and cost-effective serverless compute solution for modern cloud applications. It is widely used for automation, data processing, and web backend services. However, developers must consider cold start delays, execution limits, and storage constraints when designing serverless applications.
+
+Next Steps: Try deploying a Lambda function using AWS CLI or Terraform for better automat
+
+Thank You.
+
+
+
