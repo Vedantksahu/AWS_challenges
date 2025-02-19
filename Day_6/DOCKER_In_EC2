@@ -1,0 +1,14 @@
+Deploying a Node.js Website Using Docker on AWS EC2
+
+
+Step -1:-
+
+Setting up the AWS instance:-
+
+Amazon EC2 (Elastic Compute Cloud) provides scalable compute capacity in the cloud, allowing users to run virtual servers. For this project, we assume:
+
+-Instance Type: t2.micro (Free Tier eligible)
+-OS: Amazon Linux 2 or Ubuntu 20.04
+-Security Group: Open port 80 and port 3000 (for Node.js)
+-IAM Role: Ensure EC2 has permissions to pull Docker images if needed
+
