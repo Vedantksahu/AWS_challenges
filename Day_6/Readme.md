@@ -29,8 +29,8 @@ AWS EC2 instance (Ubuntu or Amazon Linux 2)
 
 1. Clone the Repository
 
-$git clone 
-$cd 
+$git clone https://github.com/Vedantksahu/AWS_challenges.git
+$cd AWS_challanges/Day-6
 
 # Step:-2
 
