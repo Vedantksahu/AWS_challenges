@@ -15,13 +15,13 @@ Follow these steps to clone the repository, build the Docker image, and run the 
 
 Ensure you have the following installed:
 
-# Git
+Git
 
-# Docker
+Docker
 
-# Node.js
+Node.js
 
-# AWS EC2 instance (Ubuntu or Amazon Linux 2)
+AWS EC2 instance (Ubuntu or Amazon Linux 2)
 
 
 ---------------------------------------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ sudo usermod -aG docker $USER
 $sudo apt-get reboot
 
 
-# Relogin in the system, as after changing the usergroup the system needs reboot.
+* Relogin in the system, as after changing the usergroup the system needs reboot. *
 
 # Step-8:- 
 
